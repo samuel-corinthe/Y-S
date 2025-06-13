@@ -766,6 +766,35 @@ a:hover {
   color: #721c24;
   border: 1px solid #f5c6cb;
 }
+.form-group-checkbox {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: var(--spacing-lg);
+  font-weight: 500;
+  color: var(--text-primary);
+}
+
+.form-group-checkbox input[type="checkbox"] {
+  width: auto;
+  height: auto;
+  margin: 0;
+}
+
+.form-group-checkbox label {
+  margin: 0;
+  font-weight: 500;
+  color: var(--text-primary);
+}
+
+.form-group-checkbox a {
+  color: var(--primary-color);
+  text-decoration: underline;
+}
+
+.form-group-checkbox a:hover {
+  color: var(--secondary-color);
+}
 
 /* ==========================================================================
    FOOTER
