@@ -717,24 +717,25 @@ a:hover {
     .testimonial-card {
         padding: var(--spacing-lg);
     }
-    
-    .testimonial-text {
-        font-size: 1rem;
-    }
-}
 
-@media (max-width: 768px) {
     .testimonial-text {
         font-size: 1rem;
-        padding-left: 25px;
+        padding-left: 2rem; /* espace pour le guillemet */
+        position: relative; /* nécessaire pour ::before */
     }
 
     .testimonial-text::before {
+        content: '"';
         font-size: 2rem;
-        left: -15px;
+        position: absolute;
+        left: 0;
+        top: -0.3rem;
+        color: var(--primary-color);
+        opacity: 0.3;
+        font-family: serif;
+        pointer-events: none;
     }
 }
-
 
 /* ==========================================================================
    SECTION CONTACT
