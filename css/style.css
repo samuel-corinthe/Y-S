@@ -668,7 +668,7 @@ a:hover {
     color: var(--primary-color);
     position: absolute;
     top: -10px;
-    left: -10px;
+    left: -30px;
     opacity: 0.3;
     font-family: serif;
 }
