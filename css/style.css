@@ -720,20 +720,22 @@ a:hover {
 
     .testimonial-text {
         font-size: 1rem;
-        padding-left: 2rem; /* espace pour le guillemet */
-        position: relative; /* nécessaire pour ::before */
+        padding-left: 1.75rem; /* réduit l'espace à gauche */
+        position: relative;
+        line-height: 1.5;
     }
 
     .testimonial-text::before {
         content: '"';
-        font-size: 2rem;
+        font-size: 2.25rem;
         position: absolute;
         left: 0;
-        top: -0.3rem;
+        top: 0.1rem;
         color: var(--primary-color);
-        opacity: 0.3;
+        opacity: 0.25;
         font-family: serif;
         pointer-events: none;
+        line-height: 1;
     }
 }
 
