@@ -600,12 +600,136 @@ a:hover {
 }
 
 /* ==========================================================================
+   SECTION TÉMOIGNAGES
+   ========================================================================== */
+
+.testimonials {
+    padding: var(--spacing-2xl) 0;
+  background: var(--bg-secondary);
+}
+
+
+.testimonials-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: var(--spacing-xl);
+}
+
+.testimonial-card {
+    background: var(--bg-secondary);
+    padding: var(--spacing-xl);
+    border-radius: var(--radius-lg);
+    border: 1px solid var(--border-color);
+    transition: all var(--transition-normal);
+    position: relative;
+    overflow: hidden;
+}
+
+.testimonial-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 4px;
+    background: linear-gradient(90deg, var(--primary-color), var(--secondary-color));
+    transform: scaleX(0);
+    transition: transform var(--transition-normal);
+}
+
+.testimonial-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 30px var(--shadow-medium);
+}
+
+.testimonial-card:hover::before {
+    transform: scaleX(1);
+}
+
+.testimonial-rating {
+    display: flex;
+    gap: 4px;
+    margin-bottom: var(--spacing-md);
+    color: #fbbf24;
+}
+
+.testimonial-text {
+    font-style: italic;
+    line-height: 1.6;
+    margin-bottom: var(--spacing-lg);
+    color: var(--text-primary);
+    font-size: 1.1rem;
+    position: relative;
+}
+
+.testimonial-text::before {
+    content: '"';
+    font-size: 3rem;
+    color: var(--primary-color);
+    position: absolute;
+    top: -10px;
+    left: -10px;
+    opacity: 0.3;
+    font-family: serif;
+}
+
+.testimonial-author {
+    display: flex;
+    align-items: center;
+    gap: var(--spacing-md);
+}
+
+.author-avatar {
+    width: 50px;
+    height: 50px;
+    background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    flex-shrink: 0;
+}
+
+.author-info {
+    flex: 1;
+}
+
+.author-name {
+    font-weight: 600;
+    color: var(--text-primary);
+    margin: 0 0 var(--spacing-xs) 0;
+    font-size: 1rem;
+}
+
+.author-position {
+    color: var(--text-secondary);
+    font-size: 0.9rem;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .testimonials-grid {
+        grid-template-columns: 1fr;
+        gap: var(--spacing-lg);
+    }
+    
+    .testimonial-card {
+        padding: var(--spacing-lg);
+    }
+    
+    .testimonial-text {
+        font-size: 1rem;
+    }
+}
+
+/* ==========================================================================
    SECTION CONTACT
    ========================================================================== */
 
 .contact {
-  padding: var(--spacing-2xl) 0;
-  background: var(--bg-secondary);
+    padding: var(--spacing-2xl) 0;
+    background: var(--bg-primary);
 }
 
 .contact-content {
@@ -645,7 +769,7 @@ a:hover {
 
 /* Formulaire de contact */
 .contact-form {
-  background: var(--bg-primary);
+  background: var(--bg-secondary);
   padding: var(--spacing-xl);
   border-radius: var(--radius-lg);
   border: 1px solid var(--border-color);
@@ -671,7 +795,7 @@ a:hover {
   border-radius: var(--radius-md);
   font-family: inherit;
   font-size: var(--font-size-base);
-  background: var(--bg-primary);
+  background: var(--bg-secondary);
   color: var(--text-primary);
   transition: all var(--transition-normal);
   resize: vertical;
