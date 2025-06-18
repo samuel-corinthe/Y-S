@@ -723,6 +723,19 @@ a:hover {
     }
 }
 
+@media (max-width: 768px) {
+    .testimonial-text {
+        font-size: 1rem;
+        padding-left: 25px;
+    }
+
+    .testimonial-text::before {
+        font-size: 2rem;
+        left: -15px;
+    }
+}
+
+
 /* ==========================================================================
    SECTION CONTACT
    ========================================================================== */
